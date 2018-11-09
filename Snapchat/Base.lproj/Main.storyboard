@@ -179,8 +179,22 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPf-r7-Rmk">
+                                <rect key="frame" x="163" y="267" width="49" height="30"/>
+                                <state key="normal" title="Record"/>
+                                <connections>
+                                    <action selector="recordTapped:" destination="FtU-pN-hgc" eventType="touchUpInside" id="2Jj-Qu-psJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRc-oz-R5S">
+                                <rect key="frame" x="146.5" y="307" width="82" height="30"/>
+                                <state key="normal" title="Play Record"/>
+                                <connections>
+                                    <action selector="playTapped:" destination="FtU-pN-hgc" eventType="touchUpInside" id="GQO-dD-vyj"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BjL-ix-RKS">
-                                <rect key="frame" x="134.5" y="277" width="106" height="30"/>
+                                <rect key="frame" x="134" y="377" width="106" height="30"/>
                                 <state key="normal" title="Elegir Contacto"/>
                                 <connections>
                                     <action selector="elegirContactoTapped:" destination="FtU-pN-hgc" eventType="touchUpInside" id="38H-RV-kyn"/>
@@ -190,13 +204,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="T3B-z5-0aw" firstAttribute="centerX" secondItem="vnM-h1-u3K" secondAttribute="centerX" id="AwI-lh-Xnd"/>
-                            <constraint firstItem="BjL-ix-RKS" firstAttribute="top" secondItem="I2a-gR-TrK" secondAttribute="bottom" constant="20" id="Fg0-CD-HGm"/>
                             <constraint firstItem="I2a-gR-TrK" firstAttribute="width" secondItem="T3B-z5-0aw" secondAttribute="width" id="ONR-Py-a9D"/>
+                            <constraint firstItem="UPf-r7-Rmk" firstAttribute="top" secondItem="I2a-gR-TrK" secondAttribute="bottom" constant="10" id="SVx-i3-nH3"/>
                             <constraint firstItem="T3B-z5-0aw" firstAttribute="centerX" secondItem="vnM-h1-u3K" secondAttribute="centerX" id="TSL-mT-Dej"/>
+                            <constraint firstItem="UPf-r7-Rmk" firstAttribute="centerX" secondItem="vnM-h1-u3K" secondAttribute="centerX" id="ZrF-9u-Hu5"/>
                             <constraint firstItem="T3B-z5-0aw" firstAttribute="top" secondItem="6CF-nv-XhY" secondAttribute="top" constant="20" id="ama-74-moV"/>
                             <constraint firstItem="BjL-ix-RKS" firstAttribute="centerX" secondItem="vnM-h1-u3K" secondAttribute="centerX" id="ccs-Rc-pfK"/>
                             <constraint firstItem="I2a-gR-TrK" firstAttribute="centerX" secondItem="vnM-h1-u3K" secondAttribute="centerX" id="dZ7-XG-yfJ"/>
+                            <constraint firstItem="oRc-oz-R5S" firstAttribute="top" secondItem="UPf-r7-Rmk" secondAttribute="bottom" constant="10" id="fKO-yZ-Tyx"/>
+                            <constraint firstItem="BjL-ix-RKS" firstAttribute="top" secondItem="oRc-oz-R5S" secondAttribute="bottom" constant="40" id="jVA-Qk-xO0"/>
                             <constraint firstItem="I2a-gR-TrK" firstAttribute="top" secondItem="T3B-z5-0aw" secondAttribute="bottom" constant="15" id="oV1-c7-6ZH"/>
+                            <constraint firstItem="oRc-oz-R5S" firstAttribute="centerX" secondItem="vnM-h1-u3K" secondAttribute="centerX" id="qkU-Y7-wN0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6CF-nv-XhY"/>
                     </view>
@@ -211,6 +229,7 @@
                         <outlet property="descripcionTextField" destination="I2a-gR-TrK" id="bMp-5L-vGj"/>
                         <outlet property="elegirContactoBoton" destination="BjL-ix-RKS" id="91q-Qy-Hl8"/>
                         <outlet property="imageView" destination="T3B-z5-0aw" id="yDa-ku-Xzm"/>
+                        <outlet property="recordButton" destination="UPf-r7-Rmk" id="XnS-2x-oKZ"/>
                         <segue destination="vew-50-KSD" kind="show" identifier="seleccionarContactoSegue" id="a8A-H9-C0T"/>
                     </connections>
                 </viewController>

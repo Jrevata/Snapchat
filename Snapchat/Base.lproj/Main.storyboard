@@ -132,18 +132,27 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BUM-QY-3fX">
-                                <rect key="frame" x="10" y="74" width="355" height="552"/>
+                                <rect key="frame" x="10" y="74" width="355" height="512"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tgw-av-pDC">
+                                <rect key="frame" x="151.5" y="596" width="72" height="30"/>
+                                <state key="normal" title="Play Audio"/>
+                                <connections>
+                                    <action selector="audioPlayTapped:" destination="Uhr-eX-AWy" eventType="touchUpInside" id="z1W-AG-EUd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="lPa-v2-0ka" firstAttribute="bottom" secondItem="MmI-D3-pFE" secondAttribute="bottom" constant="10" id="3Iu-Lq-lkb"/>
+                            <constraint firstItem="MmI-D3-pFE" firstAttribute="top" secondItem="Tgw-av-pDC" secondAttribute="bottom" constant="10" id="Bgl-jP-oOC"/>
                             <constraint firstItem="BUM-QY-3fX" firstAttribute="leading" secondItem="lPa-v2-0ka" secondAttribute="leading" constant="10" id="JtZ-nX-idn"/>
+                            <constraint firstItem="Tgw-av-pDC" firstAttribute="top" secondItem="BUM-QY-3fX" secondAttribute="bottom" constant="10" id="TTf-5U-W5h"/>
                             <constraint firstItem="lPa-v2-0ka" firstAttribute="trailing" secondItem="MmI-D3-pFE" secondAttribute="trailing" constant="5" id="agb-69-M1F"/>
                             <constraint firstItem="lPa-v2-0ka" firstAttribute="trailing" secondItem="BUM-QY-3fX" secondAttribute="trailing" constant="10" id="mds-9k-dzH"/>
                             <constraint firstItem="MmI-D3-pFE" firstAttribute="leading" secondItem="lPa-v2-0ka" secondAttribute="leading" constant="5" id="nPn-Iv-L3r"/>
-                            <constraint firstItem="MmI-D3-pFE" firstAttribute="top" secondItem="BUM-QY-3fX" secondAttribute="bottom" constant="10" id="p6W-vi-ECo"/>
                             <constraint firstItem="BUM-QY-3fX" firstAttribute="top" secondItem="lPa-v2-0ka" secondAttribute="top" constant="10" id="xUi-fq-8Kn"/>
+                            <constraint firstItem="Tgw-av-pDC" firstAttribute="centerX" secondItem="EHW-Aw-fvk" secondAttribute="centerX" id="ykx-2j-dHz"/>
                             <constraint firstItem="MmI-D3-pFE" firstAttribute="centerX" secondItem="EHW-Aw-fvk" secondAttribute="centerX" id="z4w-hd-Aez"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lPa-v2-0ka"/>
@@ -155,7 +164,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sA5-uC-yqJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1937" y="790"/>
+            <point key="canvasLocation" x="1936.8" y="789.35532233883066"/>
         </scene>
         <!--Imagen View Controller-->
         <scene sceneID="ykR-Wq-UQf">

@@ -23,10 +23,12 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         FIRDatabase.database().reference().child("usuarios").child((FIRAuth.auth()?.currentUser?.uid)!).child("snap").observe(FIRDataEventType.childAdded, with: {(snapshot) in
             let snap = Snap()
             snap.id = snapshot.key
-            snap.imagenURL = ((snapshot.value as! Dictionary<String, Any>)["imagenURL"] as! String)
-            snap.from = ((snapshot.value as! Dictionary<String, Any>)["from"] as! String)
-            snap.descrip = ((snapshot.value as! Dictionary<String, Any>)["descripcion"] as! String)
-            snap.imagenID = ((snapshot.value as! Dictionary<String, Any>)["imagenID"] as! String)
+            snap.imagenURL  = ((snapshot.value as! Dictionary<String, Any>)["imagenURL"] as! String)
+            snap.from       = ((snapshot.value as! Dictionary<String, Any>)["from"] as! String)
+            snap.descrip    = ((snapshot.value as! Dictionary<String, Any>)["descripcion"] as! String)
+            snap.imagenID   = ((snapshot.value as! Dictionary<String, Any>)["imagenID"] as! String)
+            snap.audioID    = ((snapshot.value as! Dictionary<String, Any>)["audioID"] as! String)
+            snap.audioURL   = ((snapshot.value as! Dictionary<String, Any>)["audioURL"] as! String)
             self.snaps.append(snap)
             self.tableView.reloadData()
         })
